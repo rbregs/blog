@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+.content img {
+    max-width: 500px;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 30%;
+
+}
+
+
+.textContent h2, .textContent p {
+    margin: 5px;
+}
+
+span {
+    color: rgb(103, 128, 128);
+}
