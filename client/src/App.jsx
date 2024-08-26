@@ -8,6 +8,9 @@ import Register from './components/Register/Register'
 import Layout from './Layout'
 import Homepage from './components/pages/Homepage'
 import { UserContextProvider } from './UserContext';
+import Createpost from './components/pages/Createpost'
+import PostPage from './components/pages/PostPage'
+import EditPost from './components/pages/EditPost'
 
 
 
@@ -20,6 +23,9 @@ function App() {
               <Route path="/" element= { <Homepage/>}/>
               <Route path={'/login'} element ={<Login />}/>
               <Route  path={'/register'} element ={<Register />}/>
+              <Route  path={'/create'} element ={<Createpost />}/>
+              <Route  path={'/post/:id'} element={<PostPage/>}/>
+              <Route  path={'/edit/:id'} element={<EditPost/>}/>
             </Route>
         </Routes>
 

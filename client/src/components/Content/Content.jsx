@@ -1,48 +1,27 @@
-import React from 'react'
-import style from './Content.module.css'
+import React from 'react';
+import style from './Content.module.css';
+import { format } from 'date-fns'; 
+import {Link} from   'react-router-dom'
 
-export default function Content() {
+export default function Content({ _id,title, summary, content, cover, createdAt,author }) {
   return (
-    <div className="container">
-        <div className={style.content}>
-            <img src="https://www.reuters.com/resizer/v2/J6LRZYSPMVMW3ETSE7SULXPVBQ.jpg?auth=4e8e081ae65e1cc0c60597a5978400b4b2c25519b6c1f006a2302206c5616b68&width=960&quality=80" alt="" />
-            <div className={style.textContent}>
-                <h2>THIS IS FOR TITLE</h2>
-                <p className={style.info}>
-                    <span >Author</span>
-                    <time></time>
-                </p>
-              
-                <p>this is sample paragraph this is sample paragraphthis is sample paragraph
-                        this is sample paragraph
-                        this is sample paragraph
-                        this is sample paragraph
-                        this is sample paragraphthis is sample paragraph
-                        this is sample paragraph
-
-                        this is sample paragraph
-                </p>
-            </div>
+    <div className={style.container}> 
+      <div className={style.content}>
+        <Link to={`/post/${_id}`}>
+            <img src={'http://localhost:3000/' +cover} alt={title} /> 
+        </Link>
+        <div className={style.textContent}>
+        <Link to={`/post/${_id}`} className={style.postLink}>
+            <h2>{title}</h2>
+        </Link>
+       
+          <p className={style.info}> 
+            <span> {author.username} </span>
+            <time>{format(new Date(createdAt), 'dd MMMM yyyy HH:mm')}</time> 
+          </p>
+          <p>{summary}</p>
         </div>
-        <div className={style.content}>
-            <img src="https://www.reuters.com/resizer/v2/J6LRZYSPMVMW3ETSE7SULXPVBQ.jpg?auth=4e8e081ae65e1cc0c60597a5978400b4b2c25519b6c1f006a2302206c5616b68&width=960&quality=80" alt="" />
-            <div className={style.textContent}>
-                <h2>THIS IS FOR TITLE</h2>
-                <p className={style.info}>
-                    <span >Author</span>
-                    <time></time>
-                </p>
-                <p>this is sample paragraph this is sample paragraphthis is sample paragraph
-                        this is sample paragraph
-                        this is sample paragraph
-                        this is sample paragraph
-                        this is sample paragraphthis is sample paragraph
-                        this is sample paragrapdsdasdasdadsdadsh
-
-                        this is sample paragraph
-                </p>
-            </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }

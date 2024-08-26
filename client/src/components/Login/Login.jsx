@@ -26,7 +26,7 @@ export default function Login() {
       if (response.ok) {
         const userInfo = await response.json();
         setUserInfo(userInfo);
-        setRedirect(true); // Set redirect after successful login
+        setRedirect(true); 
       } else {
         alert('Wrong credentials');
       }

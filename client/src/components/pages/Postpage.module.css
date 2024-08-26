@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    justify-items: center; 
+    align-items: center;   
+    /* background-color: antiquewhite; */
+}
+
+.container h1 {
+    text-align: center;  
+}
+
+.container img {
+    object-fit: cover; 
+    object-position: center center;
+    width: 100%; 
+    max-width: 700px; 
+    height: auto; 
+    display: block; 
+   
+   
+}
+
+.edit {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(72, 71, 70);
+    margin: 50px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info,
+time {
+    margin-bottom: 10px;
+}
+
+svg {
+    height: 20px;
+    margin-left: 5px; 
+}

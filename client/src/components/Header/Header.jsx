@@ -24,7 +24,7 @@ export default function Header() {
       credentials: 'include',
       method: 'POST',
     }).then(() => {
-      setUserInfo(null); // Clear user info on logout
+      setUserInfo(null);
     }).catch(error => console.error('Error logging out:', error));
   }
 
@@ -33,12 +33,12 @@ export default function Header() {
   return (
     <header>
       <nav className={style.container}>
-        <Link to="/" className={style.logo}>Food Blog</Link>
+        <Link to="/" className={style.logo}>Filipino Food</Link>
         <ul className={style.list}>
           {username ? (
             <>
               <li><Link to="/create">Create new post</Link></li>
-              <li><a href="#" onClick={handleLogoutOnClick}>{username}</a></li>
+              <li><a onClick={handleLogoutOnClick}>{username}</a></li>
             </>
           ) : (
             <>

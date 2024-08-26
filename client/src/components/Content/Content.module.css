@@ -1,26 +1,26 @@
 .container {
     display: grid;
     align-items: center;
-    justify-content: center;
-    margin: 10px auto;
+    justify-content: flex-start;
+    margin-left: 20%;
 }
 .content {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  padding: 0;
 
 }
 
 .content img {
-    max-width: 500px;
+    display: flex;
+   width: 400px;
+   height: 300px;
+
 }
 
 .textContent {
-    display: flex;
-    flex-direction: column;
     margin-left: 10px;
-    width: 30%;
-
 }
 
 
@@ -30,4 +30,9 @@
 
 span {
     color: rgb(103, 128, 128);
+}
+
+.postLink {
+    text-decoration: none;
+    color: antiquewhite;
 }
